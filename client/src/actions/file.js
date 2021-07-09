@@ -42,6 +42,7 @@ export function uploadFile(file, dirId) {
             const response = await axios.post(`http://localhost:5000/api/files/upload`, formData, {
                 headers: {Authorization: `Bearer ${localStorage.getItem('token')}`},
                 onUploadProgress: progressEvent => {
+                    //ослеживание процесса загрузки файлов - totalLength
                     const totalLength = progressEvent.lengthComputable ? progressEvent.total : progressEvent.target.getResponseHeader('content-length') || progressEvent.target.getResponseHeader('x-decompressed-content-length');
                     console.log('total', totalLength)
                     if (totalLength) {
