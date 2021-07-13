@@ -46,7 +46,6 @@ class FileController {
                     files = await File.find({user: req.user.id, parent: req.query.parent})
                     break;
             }
-            // const files = await File.find({user: req.user.id, parent: req.query.parent})
             return res.json(files)
         } catch (e) {
             console.log(e)
@@ -129,6 +128,18 @@ class FileController {
         } catch (e) {
             console.log(e)
             return res.status(400).json({message: 'Dir is not empty'})
+        }
+    }
+
+    async searchFile(req, res) {
+        try {
+            const searchName = req.query.search
+            let files = await File.find({user: req.user.id})
+            files = files.filter(file => file.name.includes(searchName)) //выведет слово даже если введеное слово является серединой слова
+            return res.json(files)
+        } catch (e) {
+            console.log(e)
+            return res.status(400).json({message: 'Search error'})
         }
     }
 }
