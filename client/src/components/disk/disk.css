@@ -5,19 +5,57 @@
   display: flex;
 }
 .disk__create {
+  width: 158px;
+  height: 34px;
+  border: 1px solid #566885;
+  box-sizing: border-box;
+  border-radius: 14px;
   margin-left: 10px;
+}
+.disk__create:hover {
+  background-color: darkgray;
+  opacity: 90%;
+}
+.disk__back {
+  width: 55px;
+  height: 34px;
+  border: 1px solid #566885;
+  box-sizing: border-box;
+  border-radius: 37px;
+  /* Center the image */
+  background: url("../../assets/img/btnBackLogo.svg") no-repeat center;
+  background-size: 23px 9px;
+}
+.disk__upload {
+  display: flex;
 }
 .disk__upload-input {
   display: none;
 }
 .disk__upload-label {
   border: 2px dashed #566885;
-  padding: 5px 10px;
+  padding: 6px 10px;
   cursor: pointer;
   margin-left: 10px;
+  height: 34px;
+}
+.disk__upload-label:hover {
+  border: 2px solid #566885;
+  background-color: rgba(180, 180, 180,0.6);
 }
 .disk__select {
+  width: 10%;
+  height: 34px;
+  padding-left: 40px;
   margin-left: auto;
+  background-image: url("../../assets/img/groupLogo.svg");
+  background-repeat: no-repeat;
+  background-position: left 8% top 50%;
+  background-color: transparent;
+  outline: none;
+}
+.disk__select:focus {
+  border: 2px solid #566885;
 }
 .disk__list,
 .disk__plate {
@@ -28,13 +66,44 @@
   cursor: pointer;
   background: no-repeat center center;
   background-size: contain;
-  margin: 0 10px;
+  margin: 6px 10px;
 }
 .disk__list {
   background-image: url("../../assets/img/list.svg");
 }
 .disk__plate {
   background-image: url("../../assets/img/plate.svg");
+}
+.disk__plate:hover::after {
+  content: 'plate';
+  position: relative;
+  top: 50px;
+  z-index: 1; /* Отображаем подсказку поверх других элементов */
+  font-family: Arial, sans-serif; /* Гарнитура шрифта */
+  font-size: 14px; /* Размер текста подсказки */
+  padding: 5px 10px; /* Поля */
+  color: #566885;
+  background: rgba(220,220,220,0.9);
+}
+.disk__list:hover,
+.disk__plate:hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+.disk__list:hover::after{
+  content: 'list';
+  position: relative;
+  top: 50px;
+  z-index: 1; /* Отображаем подсказку поверх других элементов */
+  font-family: Arial, sans-serif; /* Гарнитура шрифта */
+  font-size: 14px; /* Размер текста подсказки */
+  padding: 5px 10px; /* Поля */
+  color: #566885;
+  background: rgba(220,220,220,0.9)
+}
+.drop-area-text {
+  margin-bottom: 180px;
 }
 .drop-area {
   width: 100%;
@@ -45,6 +114,8 @@
   justify-content: center;
   align-items: center;
   font-size: 40px;
+  background: url("../../assets/img/add-circle-line.svg") no-repeat 50% 60%;
+  background-size: 150px 150px;
 }
 .popup {
   width: 100%;
@@ -69,6 +140,31 @@
 }
 .popup__create {
   align-self: flex-end;
+  width: 80px;
+  height: 34px;
+  border: 1px solid #566885;
+  box-sizing: border-box;
+  border-radius: 37px;
+}
+.popup__close {
+  width: 18px;
+  height: 18px;
+  border: 1px solid #566885;
+  box-sizing: border-box;
+  border-radius: 37px;
+  /* Center the image */
+  background-image: url("../../assets/img/close-line.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 14px 14px;
+}
+.popup__create:hover{
+  background-color: rgba(0,255,0,0.6);
+  opacity: 90%;
+}
+.popup__close:hover {
+  background-color: rgba(255, 0, 0, 0.6);
+  opacity: 90%;
 }
 .popup__header {
   display: flex;

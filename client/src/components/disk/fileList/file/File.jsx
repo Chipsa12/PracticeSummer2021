@@ -41,8 +41,8 @@ const File = ({file}) => {
                 <div className="file__date">{data}</div>
                 <div className="file__size">{sizeFormat(file.size)}</div>
                 {file.type !== 'dir' &&
-                <button onClick={(e) => downloadClickHandler(e)} className="file__btn file__download">download</button>}
-                <button onClick={(e) => deleteClickHandler(e)} className="file__btn file__delete">delete</button>
+                <button id="download" onClick={(e) => downloadClickHandler(e)} className="file__btn file__download"></button>}
+                <button id="delete" onClick={(e) => deleteClickHandler(e)} className="file__btn file__delete"></button>
             </div>
         );
     }
@@ -53,8 +53,8 @@ const File = ({file}) => {
                 <div className="file-plate__name">{file.name}</div>
                 <div className="file-plate__btns">
                     {file.type !== 'dir' &&
-                    <button onClick={(e) => downloadClickHandler(e)} className="file-plate__btn file-plate__download">download</button>}
-                    <button onClick={(e) => deleteClickHandler(e)} className="file-plate__btn file-plate__delete">delete</button>
+                    <button onClick={(e) => downloadClickHandler(e)} className="file-plate__btn file-plate__download"></button>}
+                    <button onClick={(e) => deleteClickHandler(e)} className="file-plate__btn file-plate__delete"></button>
                 </div>
             </div>
         );

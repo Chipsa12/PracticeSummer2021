@@ -2,11 +2,12 @@
     height: 300px;
     width: 300px;
     position: fixed;
-    background-color: #566885;
+    background-color: white;
     bottom: 0;
     right: 0;
     padding: 20px;
     border-radius: 12px;
+    border: 1px solid #566885;
     overflow-y: auto;
 }
 .uploader__header {
@@ -14,17 +15,53 @@
     justify-content: space-between;
 }
 .uploader__title {
-    color: #E9E6E6;
+    color: #566885;
     font-size: 1.2rem;
 }
 .uploader__close {
     padding: 3px;
+    margin-bottom: 10px;
+    outline: none;
+    border: none;
+    width: 18px;
+    height: 18px;
+    box-sizing: border-box;
+    border-radius: 37px;
+    border: 1px solid #566885;
+    background-image: url("../../../assets/img/close-line.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 16px 16px;
+}
+.uploader__close:hover {
+    background-color: rgba(255,0,0,0.6);
+}
+.upload-file__remove {
+    outline: none;
+    width: 18px;
+    height: 18px;
+    box-sizing: border-box;
+    border-radius: 37px;
+    border: 1px solid #566885;
+    background-image: url("../../../assets/img/close-line.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 12px 12px;
+}
+.upload-file__remove:hover {
+    background-color: rgba(255,0,0,0.6);
 }
 .upload-file {
-    background-color: #E9E6E6;
+    background-color: rgba(120,120,120,0.3);
+    border: 1px solid #566885;
     border-radius: 8px;
     margin: 5px 0;
     padding: 5px 10px;
+}
+.upload-file:hover {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
 }
 .upload-file__header {
     display: flex;

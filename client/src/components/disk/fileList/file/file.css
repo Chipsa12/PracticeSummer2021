@@ -22,6 +22,72 @@
 .file__btn {
   display: none;
 }
+.file__download {
+  width: 58px;
+  height: 34px;
+  border: 1px solid #566885;
+  box-sizing: border-box;
+  border-radius: 37px;
+  background: url("../../../../assets/img/downloadLogo.svg") no-repeat center;
+  background-size: cover;
+  background-size: 30px 24px;
+  margin-left: 30px;
+}
+.file__download:hover::after{
+  content: 'download';
+  position: relative; /* Абсолютное позиционирование */
+  top: 36px;
+  right: 10px;
+  z-index: 1; /* Отображаем подсказку поверх других элементов */
+  font-family: Arial, sans-serif; /* Гарнитура шрифта */
+  font-size: 14px; /* Размер текста подсказки */
+  padding: 5px 10px; /* Поля */
+  color: #566885;
+  background: rgba(220,220,220,0.9)
+  /*background-color: transparent; !* Прозрачный цвет фона *!*!*/
+}.file__delete:hover::after{
+   content: 'delete';
+   position: relative; /* Абсолютное позиционирование */
+   top: 36px;
+   z-index: 1; /* Отображаем подсказку поверх других элементов */
+   font-family: Arial, sans-serif; /* Гарнитура шрифта */
+   font-size: 14px; /* Размер текста подсказки */
+   padding: 5px 10px; /* Поля */
+   color: #566885;
+   background: rgba(220,220,220,0.9)
+   /*background-color: transparent; !* Прозрачный цвет фона *!*!*/
+}
+.file__delete {
+  width: 58px;
+  height: 34px;
+  border: 1px solid #566885;
+  box-sizing: border-box;
+  border-radius: 37px;
+  background: url("../../../../assets/img/deleteLogo.svg") no-repeat center;
+  background-size: cover;
+  background-size: 24px 16px;
+  margin-left: 25px;
+}
+.file-plate__download {
+  width: 58px;
+  height: 34px;
+  border: 1px solid #566885;
+  box-sizing: border-box;
+  border-radius: 37px;
+  background: url("../../../../assets/img/downloadLogo.svg") no-repeat center;
+  background-size: cover;
+  background-size: 24px 20px;
+}
+.file-plate__delete {
+  width: 58px;
+  height: 34px;
+  border: 1px solid #566885;
+  box-sizing: border-box;
+  border-radius: 37px;
+  background: url("../../../../assets/img/deleteLogo.svg") no-repeat center;
+  background-size: cover;
+  background-size: 24px 14px;
+}
 .file:hover .file__date {
   grid-column-start: 3;
 }

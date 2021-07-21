@@ -37,7 +37,7 @@ const Navbar = () => {
         <div className="navbar">
             <div className="container">
                 <img src={Logo} alt="" className="navbar__logo"/>
-                <div className="navbar__header"><NavLink to='/' className="navbar__header__link">MERN CLOUD</NavLink></div>
+                <div className="navbar__header"><NavLink to='/' className="navbar__header__link">CLOUD</NavLink></div>
                 {isAuth && <input
                     value={searchName}
                     onChange={e => searchChangeHandler(e)}

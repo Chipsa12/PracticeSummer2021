@@ -17,13 +17,21 @@
   margin: 10px 20px;
 }
 .authorization__btn {
-  border: none;
-  background-color: #566885;
-  border-radius: 8px;
-  color: white;
+  /*border: none;*/
+  /*background-color: #566885;*/
+  /*border-radius: 8px;*/
+  /*color: white;*/
   font-weight: 700;
   padding: 5px 10px;
   align-self: flex-end;
   margin-top: 10px;
+  height: 40px;
+  border: 1px solid #566885;
+  box-sizing: border-box;
+  border-radius: 37px;
+}
+.authorization__btn:hover {
+  background: darkgray;
+  opacity: 0.9;
 }
 /*# sourceMappingURL=authorization.css.map */
